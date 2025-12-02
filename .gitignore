@@ -1,0 +1,14 @@
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.venv
+uv.lock
+repomix-output.md
+.DS_Store
+
+# Only initial weights.pt is tracked; post-trained checkpoints are ignored
+data/*.pt
+!data/weights.pt

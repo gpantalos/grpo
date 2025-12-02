@@ -1,0 +1,29 @@
+[project]
+name = "grpo"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib",
+    "pandas",
+    "rich",
+    "streamlit",
+    "tiktoken",
+    "torch",
+]
+
+[project.scripts]
+train = "grpo.train:main"
+app = "grpo.app:run"
+
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[dependency-groups]
+dev = ["watchdog"]
